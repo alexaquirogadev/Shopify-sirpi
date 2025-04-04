@@ -1,0 +1,171 @@
+.beer-slider {
+  display: inline-block;
+  position: relative;
+  overflow: hidden; 
+}
+  .beer-slider *, .beer-slider:before, .beer-slider:after,
+  .beer-slider *:before,
+  .beer-slider *:after {
+    box-sizing: border-box; }
+  .beer-slider img, .beer-slider svg {
+    vertical-align: bottom; }
+  .beer-slider > * {
+    height: 100%; }
+  .beer-slider > img {
+    max-width: 100%;
+    height: 100%; width: 100%;}
+
+.beer-reveal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 50%;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.35s;
+  border-right: 4px solid var(--gradient-base-accent-3);
+}
+  .beer-reveal > :first-child {
+    width: 200%;
+    max-width: none;
+    height: 100%; }
+  .beer-reveal > img:first-child { height: 100%; width: auto !important; }
+
+.beer-range {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  margin: 0;
+  left: -1px;
+  width: calc(100% + 2px);
+  cursor: pointer;
+  -webkit-appearance: slider-horizontal !important;
+  -moz-appearance: none;
+  opacity: 0;
+  -ms-touch-action: auto;
+  touch-action: auto; }
+  .beer-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 300vh; }
+  .beer-range::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 300vh; }
+  .beer-range::-ms-tooltip {
+    display: none; }
+
+.beer-handle {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-54%,-50%,0);
+    color: var(--color-link);
+    background: var(--gradient-base-accent-3);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #0000;
+    transition: background .3s,box-shadow .3s,opacity .5s .25s;
+}
+  
+.beer-handle:before {
+    content: "DRAG";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    letter-spacing: 3.6px;
+    font-weight: 600;
+    top: 50%;
+    left: 50%;
+    margin-left: 3px;
+   }
+  
+
+.beer-range:focus ~ .beer-handle {
+      background: var(--color-icon);
+    box-shadow: 0 0 3px #0006;
+    color: var(--gradient-base-accent-3);
+}
+
+.beer-slider[data-beer-label]:after,
+.beer-reveal[data-beer-label]:after {
+  content: attr(data-beer-label);
+  position: absolute;
+  top: 1.5rem;
+  line-height: 1;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  background: rgba(255, 255, 255, 0.75); }
+
+.beer-slider[data-beer-label]:after {
+  right: 1.5rem; }
+
+.beer-reveal[data-beer-label]:after {
+  left: 1.5rem; }
+
+.beer-slider[data-beer-label=""]:after,
+.beer-reveal[data-beer-label=""]:after {
+  content: none; }
+
+.beer-ready .beer-reveal, .beer-ready .beer-handle {
+  opacity: 1; 
+}
+.beer-slider.swiper-slide.beer-ready img{
+    transform: scale(1);
+}
+.beer-slider.swiper-slide.beer-ready.swiper-slide-active img {
+    transform: scale(1);
+}
+.beer-slider.swiper-slide.beer-ready{
+    transform: scale(1);
+}
+.beer-slider.swiper-slide.beer-ready.swiper-slide-active{
+    transform: scale(1);
+}
+/*  */
+.beer-slider.swiper-slide.beer-ready.swiper-slide-active:before {
+    content: "";
+    width: 100vw;
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gradient-background);
+    z-index: -1;
+    opacity: .7;
+}
+.beer-slider.swiper-slide.beer-ready.swiper-slide-active {
+    z-index: 1;
+    overflow: visible;
+    width: 50% !important;
+    box-shadow: 0px 1px 3.36px 0.14px rgba(0, 0, 0, 0.14);
+}
+.beer-slider.swiper-slide.beer-ready.swiper-slide-prev,
+.beer-slider.swiper-slide.beer-ready.swiper-slide-next{
+      width: 25% !important;
+}
+.beer-slider .beer-reveal:before{ content: ""; }
+.beer-slider.swiper-slide.beer-ready:after,
+.beer-slider.swiper-slide.beer-ready .beer-reveal:after{ display: block;background: var(--color-icon); color: var(--gradient-base-accent-3); font-size: 1.2rem; letter-spacing: 1.6px;  padding: 6px; }
+.beer-slider.swiper-slide.beer-ready.swiper-slide-active:after,
+.beer-slider.swiper-slide.beer-ready.swiper-slide-active .beer-reveal:after{ display: none; }
+.beer-slider.swiper-slide.beer-ready .beer-handle{ display: none; }
+.beer-slider.swiper-slide.beer-ready.swiper-slide-active .beer-handle{ display: block; }
+
+
+
+
+
+
+
+
+
+

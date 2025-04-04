@@ -1,0 +1,102 @@
+.team-section .team-section-section.two-column{ display: grid; grid-template-columns: repeat(2,1fr);}
+.team-section .team-section-section.three-column{ display: grid;  grid-template-columns: repeat(3,1fr);}
+.team-section .team-section-section.four-column{ display: grid; grid-template-columns: repeat(4,1fr);}
+.team-section .team-section-section.five-column{ display: grid; grid-template-columns: repeat(5,1fr);}
+.team-section .team-section-section.six-column{ display: grid; grid-template-columns: repeat(6,1fr);}
+.team-section .team-section-section{ column-gap: var(--grid-desktop-horizontal-spacing); row-gap: var(--grid-desktop-vertical-spacing);}
+@media screen and (max-width: 1199px) and (min-width: 751px) {
+.team-section .team-section-section.four-column{ display: grid; grid-template-columns: repeat(2,1fr);}
+.team-section .team-section-section.five-column{ display: grid; grid-template-columns: repeat(3,1fr);}
+.team-section .team-section-section.six-column{ display: grid; grid-template-columns: repeat(3,1fr);}
+.team-section .team-section-section { column-gap: var(--grid-mobile-horizontal-spacing); row-gap: var(--grid-mobile-vertical-spacing);}  
+}
+ @media screen and (max-width: 750px) {
+ .team-section .team-section-section.two-column{ display: grid; grid-template-columns: repeat(1,1fr);}
+.team-section .team-section-section.three-column{ display: grid;  grid-template-columns: repeat(1,1fr);}
+.team-section .team-section-section.four-column{ display: grid; grid-template-columns: repeat(1,1fr);}
+.team-section .team-section-section.five-column{ display: grid; grid-template-columns: repeat(1,1fr);}
+.team-section .team-section-section.six-column{ display: grid; grid-template-columns: repeat(1,1fr);}
+.team-section .team-section-section { column-gap: var(--grid-mobile-horizontal-spacing); row-gap: var(--grid-mobile-vertical-spacing); }
+ }
+.team-section .title-wrapper-with-link.content-align--left{ align-items: flex-start; }
+.team-section .title-wrapper-with-link.content-align--center{ align-items: center; }
+.team-section .team-section-section .team-section-wrapper .team-section-block-image img.team-section-image { width: 100%; height: 100%; object-fit: cover; }
+.team-section-inner.banner--content-align-center { align-items: center; text-align: center; }
+.team-section-inner.banner--content-align-right { align-items: flex-end;  text-align: right; }
+.team-section-inner.banner--content-align-left { align-items: flex-start; text-align: left; }
+
+.team-section .team-section-section:not(.background-none) .team-section-wrapper { background: rgb(var(--color-background)); height: 100%; }
+.team-section .dt-sc-team-section-section.background-primary .team-section-wrapper { background: rgb(var(--color-background)) linear-gradient(rgba(var(--color-foreground), 0.04), rgba(var(--color-foreground), 0.04)); }
+.team-section p.description { max-width: 88rem; }
+.team-section .team-section-content .team-section-inner h4.main-title a{color:var(--color-foreground); }
+.team-section .team-section-content{ padding: 30px 0; }
+.team-section .team-section-content h4.main-title{ margin: 0; font-size: 2rem; margin-bottom: 10px; font-weight: 600;  line-height: 30px; }
+.team-section .team-section-content h6.sub-title{ margin: 0;  font-size: 1.2rem; font-weight: 600; letter-spacing: 3.6px; line-height: 26px; color: var(--gradient-base-background-3); }
+.team-section-content-icon li.list-social__item:not(:last-child) { margin-right: 10px; }
+.team-section .list-social{ margin-top:0; }
+.team-section .list-social__link:hover{ color: var(--gradient-base-accent-1); }
+.team-section .team-section-block-image{ position:relative; }
+.team-section  .team-section-block-image {  display: flex; }
+.team-section .list-social__link{ padding: 0; color: var(--gradient-background);font-weight: 500; }
+.team-section .list-social__item:not(:last-child) .list-social__link:after{ content: "-"; margin-left: 10px; cursor: auto; color: var(--gradient-base-accent-3); }
+.team-section .team-section-block-image img{width:100%;}
+
+/*Overlay style*/
+.team-section-section.overlay .team-section-wrapper{ height: 500px; position: relative;}
+.team-section-section.overlay .team-section-wrapper .team-section-block-image{width:100%; height:100%; }
+.team-section-section.overlay .team-section-wrapper .team-section-content{    position: absolute; top: 0; bottom: 0; margin: auto; left: 0; right: 0; background: rgba(var(--color-background),0.4);}
+.team-section-section.overlay .team-section-wrapper .team-section-content .team-section-inner{    width: 100%;  height: 100%;  display: flex;  flex-direction: column;   justify-content: center;}
+
+/* custom css */
+@media screen and (min-width:1200px) and (max-width:1540px){
+  .team-section .team-section-content{ padding: 20px 0px; }
+  .team-section .team-section-section.four-column{ column-gap: 30px; }
+  .team-section .team-section-content h4.main-title{ line-height: 30px; font-size: 2rem; margin-bottom: 5px; }
+  .team-section .team-section-content-icon{ padding: 15px 15px !important; }
+}
+@media screen and (min-width:1024px) and (max-width:1199px){
+  
+}
+@media screen and (min-width:750px) and (max-width:1023px){
+  .team-section .team-section-content{ padding: 20px 0px; }
+  .team-section .team-section-section.four-column{ column-gap: 30px;grid-template-columns: repeat(2,1fr); }
+  .team-section .team-section-content h4.main-title{ line-height: 30px; font-size: 2rem; margin-bottom: 5px; }
+  .team-section .team-section-content-icon{ padding: 15px 15px !important; }
+}
+@media screen and (min-width:567px) and (max-width:749px){
+  .team-section .team-section-content{ padding: 20px 0px; }
+  .team-section .team-section-section.four-column{ column-gap: 30px;grid-template-columns: repeat(2,1fr); }
+  .team-section .team-section-content h4.main-title{ line-height: 30px; font-size: 2rem; margin-bottom: 5px; }
+  .team-section .team-section-content-icon{ padding: 15px 15px !important; }
+}
+@media screen and (min-width:320px) and (max-width:566px){
+  .team-section .team-section-content{ padding: 20px 0px; }
+  .team-section .team-section-section.four-column{ column-gap: 30px; row-gap: 30px; }
+  .team-section .team-section-content h4.main-title{ line-height: 30px; font-size: 2rem; margin-bottom: 5px; }
+  .team-section .team-section-content-icon{ padding: 15px 15px !important; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
